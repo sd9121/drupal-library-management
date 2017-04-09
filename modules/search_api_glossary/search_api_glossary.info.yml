@@ -1,0 +1,13 @@
+name: 'Search API AZ Glossary'
+description: 'Creates a glossary fields (A B C ...) based on node titles and user names'
+# core: 8.x
+package: Search
+type: module
+dependencies:
+  - search_api
+
+# Information added by Drupal.org packaging script on 2017-04-04
+version: '8.x-1.1'
+core: '8.x'
+project: 'search_api_glossary'
+datestamp: 1491304088
