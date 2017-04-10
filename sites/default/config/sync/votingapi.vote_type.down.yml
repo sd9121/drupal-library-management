@@ -1,0 +1,10 @@
+uuid: cf4a2140-4313-4b9f-84ea-cdcfc234d0eb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: PhXKydZW3jqadof01Iph7X_8MX5hdBjwArZzQMihj5w
+id: down
+label: 'Dislike/Down/No vote'
+value_type: points
+description: 'A negative vote.'

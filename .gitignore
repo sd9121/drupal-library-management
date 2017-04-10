@@ -60,8 +60,7 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
-
-modules
+node_modules
 vendor
 
 # Things in the core directory that Drupal 8 commits in the repository.

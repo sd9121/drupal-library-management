@@ -1,0 +1,19 @@
+uuid: a9259ae7-1154-4ea5-abfd-6a83b0cbca95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_edition
+    - node.type.library_book
+id: node.library_book.field_edition
+field_name: field_edition
+entity_type: node
+bundle: library_book
+label: Edition
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

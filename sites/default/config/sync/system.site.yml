@@ -1,0 +1,14 @@
+uuid: 1c3b7a5f-3b63-4bf1-9754-8d9857c5a6ba
+name: 'Book Library'
+mail: sagar.deora@qed42.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo

@@ -1,0 +1,25 @@
+uuid: 5081e0e7-1f09-4bc9-966b-ad51dc3e3af0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c0d61da8-c3e8-4b90-9b96-f0c343425648'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: banner
+theme: bartik
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:c0d61da8-c3e8-4b90-9b96-f0c343425648'
+settings:
+  id: 'block_content:c0d61da8-c3e8-4b90-9b96-f0c343425648'
+  label: Banner
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,13 @@
+uuid: 903b3c53-0bf1-4756-b7b6-b0777b5d0d23
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.bookmark.flag
+label: 'Bookmark this'
+type: node
+plugin: 'flag_action:bookmark.flag'
+configuration:
+  flag_id: bookmark
+  flag_action: flag

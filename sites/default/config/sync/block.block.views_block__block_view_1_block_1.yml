@@ -1,0 +1,30 @@
+uuid: 3727bd3a-3c37-4f10-bf75-6f95e813159d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.block_view_1
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__block_view_1_block_1
+theme: bartik
+region: featured_bottom_first
+weight: -9
+provider: null
+plugin: 'views_block:block_view_1-block_1'
+settings:
+  id: 'views_block:block_view_1-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

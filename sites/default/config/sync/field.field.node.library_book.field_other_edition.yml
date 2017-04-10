@@ -1,0 +1,27 @@
+uuid: 3c632bec-f88c-490b-b315-729e2837c860
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_edition
+    - node.type.library_book
+id: node.library_book.field_other_edition
+field_name: field_other_edition
+entity_type: node
+bundle: library_book
+label: 'Other Edition'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      library_book: library_book
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

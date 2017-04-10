@@ -31,3 +31,40 @@ function ds_update_8001() {
   }
 
 }
+
+/**
+ * Fix ds_switch being added to each content entity.
+ */
+function ds_update_8002() {
+  $entity_definition_update_manager = \Drupal::entityDefinitionUpdateManager();
+  $entity_types = \Drupal::entityTypeManager()->getDefinitions();
+  foreach ($entity_types as $entity_type_id => $entity_type) {
+    if ($entity_type->getGroup() == 'content' && $entity_type_id != 'node') {
+      if ($entity_definition_update_manager->getEntityType($entity_type_id)) {
+        $storage_definition = $entity_definition_update_manager->getFieldStorageDefinition('ds_switch', $entity_type_id);
+        if ($storage_definition) {
+          $entity_definition_update_manager->uninstallFieldStorageDefinition($storage_definition);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Uninstalls Layout plugin, then enables Layout Discovery.
+ */
+function ds_update_8003() {
+  if (\Drupal::moduleHandler()->moduleExists('layout_plugin')) {
+    \Drupal::service('module_installer')->uninstall(['layout_plugin'], FALSE);
+    \Drupal::service('module_installer')->install(['layout_discovery'], FALSE);
+  }
+}
+
+/**
+ * Makes sure Layout Discovery is enabled on update, as 8003 could have failed to do so.
+ */
+function ds_update_8004() {
+  if (!\Drupal::moduleHandler()->moduleExists('layout_discovery')) {
+    \Drupal::service('module_installer')->install(['layout_discovery'], FALSE);
+  }
+}

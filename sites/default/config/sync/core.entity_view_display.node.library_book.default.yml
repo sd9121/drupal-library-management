@@ -1,0 +1,138 @@
+uuid: ab1b6568-deb5-4a11-947f-f8c1a6c90a84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.library_book.body
+    - field.field.node.library_book.field_author
+    - field.field.node.library_book.field_category
+    - field.field.node.library_book.field_edition
+    - field.field.node.library_book.field_image
+    - field.field.node.library_book.field_other_edition
+    - field.field.node.library_book.field_published_date
+    - field.field.node.library_book.field_rating
+    - node.type.library_book
+  module:
+    - ds
+    - image
+    - text
+    - user
+    - votingapi_widgets
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_fluid
+      library: ds/ds_2col_fluid
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_image
+        - node_links
+      right:
+        - links
+        - node_title
+        - body
+        - flag_bookmark
+        - field_category
+        - field_edition
+        - field_author
+        - field_other_edition
+        - field_rating
+    fields:
+      node_links:
+        plugin_id: node_links
+        weight: 1
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 3
+        label: hidden
+        formatter: default
+id: node.library_book.default
+targetEntityType: node
+bundle: library_book
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 4
+    region: right
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_author:
+    type: string
+    weight: 8
+    region: right
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_category:
+    type: entity_reference_label
+    weight: 6
+    region: right
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_edition:
+    type: string
+    weight: 7
+    region: right
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: left
+  field_other_edition:
+    type: entity_reference_label
+    weight: 9
+    region: right
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_rating:
+    weight: 10
+    label: above
+    settings:
+      style: fontawesome-stars
+      show_results: '1'
+      readonly: 0
+      values: {  }
+    third_party_settings: {  }
+    type: voting_api_formatter
+    region: right
+  flag_bookmark:
+    weight: 5
+    region: right
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: right
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_published_date: true

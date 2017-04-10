@@ -1,0 +1,10 @@
+uuid: 4710b687-80b6-41f6-a9b5-1e8471a11f2c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qrSTFJFXqhbdgtLc57zhYFDH2iZAsXw17D1m50PIXo4
+id: star1
+label: 'One star'
+value_type: points
+description: 'Fivestar voting - 1 star.'
